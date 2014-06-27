@@ -33,11 +33,13 @@ public class Main extends JavaPlugin {
 			getDataFolder().mkdir();
 	}
 
-	public void repair(ArrayList<Object> al) {
-		String type = (String) al.get(0);
-		Byte data = Byte.parseByte(((String) al.get(1)));
-		Location location = (Location) al.get(2);
-		location.getWorld().getBlockAt(location).setType(Material.getMaterial(type));
-		location.getWorld().getBlockAt(location).setData(data);
+	public void repair(ArrayList<ArrayList<Object>> al) {
+		for (ArrayList<Object> al2 : al) {
+			String type = (String) al2.get(0);
+			Byte data = Byte.parseByte(((String) al2.get(1)));
+			Location location = (Location) al2.get(2);
+			location.getWorld().getBlockAt(location).setType(Material.getMaterial(type));
+			location.getWorld().getBlockAt(location).setData(data);
+		}
 	}
 }

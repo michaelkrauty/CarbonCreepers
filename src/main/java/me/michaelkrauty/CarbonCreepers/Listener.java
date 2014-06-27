@@ -24,13 +24,18 @@ public class Listener implements org.bukkit.event.Listener {
 
 	@EventHandler
 	public void onEntityExplode(EntityExplodeEvent event) {
-			List<Block> blocks = event.blockList();
-		final ArrayList<Object> al = new ArrayList<Object>();
-			for (Block block : blocks) {
-				al.add(block.getType().toString());
-				al.add(Byte.toString(block.getData()));
-				al.add(block.getLocation());
+		List<Block> blocks = event.blockList();
+
+		final ArrayList<ArrayList<Object>> al = new ArrayList<ArrayList<Object>>();
+		for (Block block : blocks) {
+			if (!block.getType().toString().equals("TNT")) {
+				ArrayList<Object> al2 = new ArrayList<Object>();
+				al2.add(block.getType().toString());
+				al2.add(Byte.toString(block.getData()));
+				al2.add(block.getLocation());
+				al.add(al2);
 			}
+		}
 		BukkitScheduler scheduler = Bukkit.getScheduler();
 		scheduler.scheduleSyncDelayedTask(main, new Runnable() {
 			@Override
