@@ -18,7 +18,6 @@ public class Main extends JavaPlugin {
 
 	public static ScheduledTasks scheduledTasks;
 
-	// TODO
 	public void onEnable() {
 		main = this;
 		checkDataFolder();
