@@ -2,12 +2,10 @@ package me.michaelkrauty.CarbonCreepers;
 
 import org.bukkit.Location;
 import org.bukkit.Material;
-import org.bukkit.block.Block;
 import org.bukkit.plugin.PluginManager;
 import org.bukkit.plugin.java.JavaPlugin;
 
 import java.util.ArrayList;
-import java.util.List;
 
 /**
  * Created on 6/27/2014.
