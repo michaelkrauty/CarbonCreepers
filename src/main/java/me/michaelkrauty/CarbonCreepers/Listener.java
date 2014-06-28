@@ -42,6 +42,6 @@ public class Listener implements org.bukkit.event.Listener {
 			public void run() {
 				main.repair(al);
 			}
-		}, 300);
+		}, (main.getConfigFile().getInt("regen_delay")) * 20);
 	}
 }

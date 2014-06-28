@@ -18,12 +18,14 @@ public class Main extends JavaPlugin {
 
 	public static Main main;
 
+	public static Config config;
 	public static DataFile dataFile;
 
 	public void onEnable() {
 		main = this;
 		checkDataFolder();
 		dataFile = new DataFile();
+		config = new Config(this);
 		PluginManager pm = getServer().getPluginManager();
 		pm.registerEvents(new me.michaelkrauty.CarbonCreepers.Listener(this), this);
 	}
@@ -38,8 +40,14 @@ public class Main extends JavaPlugin {
 			String type = (String) al2.get(0);
 			Byte data = Byte.parseByte(((String) al2.get(1)));
 			Location location = (Location) al2.get(2);
-			location.getWorld().getBlockAt(location).setType(Material.getMaterial(type));
-			location.getWorld().getBlockAt(location).setData(data);
+			if (location.getWorld().getBlockAt(location).getType() == Material.AIR) {
+				location.getWorld().getBlockAt(location).setType(Material.getMaterial(type));
+				location.getWorld().getBlockAt(location).setData(data);
+			}
 		}
+	}
+
+	public Config getConfigFile() {
+		return config;
 	}
 }

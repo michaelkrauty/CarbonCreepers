@@ -74,7 +74,6 @@ public class DataFile {
 	}
 
 	public byte getByte(String path) {
-		//return Byte.parseByte(data.getString(path));
 		return (byte) data.getInt(path);
 	}
 
