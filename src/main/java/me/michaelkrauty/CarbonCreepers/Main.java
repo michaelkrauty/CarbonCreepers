@@ -28,6 +28,10 @@ public class Main extends JavaPlugin {
 		pm.registerEvents(new me.michaelkrauty.CarbonCreepers.Listener(this), this);
 	}
 
+	public void onDisable() {
+
+	}
+
 	public void checkDataFolder() {
 		if (!getDataFolder().exists())
 			getDataFolder().mkdir();
@@ -38,7 +42,8 @@ public class Main extends JavaPlugin {
 			String type = (String) al2.get(0);
 			Byte data = Byte.parseByte(((String) al2.get(1)));
 			Location location = (Location) al2.get(2);
-			if (location.getWorld().getBlockAt(location).getType() == Material.AIR) {
+			if (location.getWorld().getBlockAt(location).getType() == Material.AIR
+					|| location.getWorld().getBlockAt(location).getType() == Material.FIRE) {
 				location.getWorld().getBlockAt(location).setType(Material.getMaterial(type));
 				location.getWorld().getBlockAt(location).setData(data);
 			}
