@@ -1,10 +1,12 @@
 package me.michaelkrauty.CarbonCreepers;
 
+import org.bukkit.Bukkit;
 import org.bukkit.block.Block;
-import org.bukkit.entity.EntityType;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.entity.EntityExplodeEvent;
+import org.bukkit.scheduler.BukkitScheduler;
 
+import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -22,14 +24,24 @@ public class Listener implements org.bukkit.event.Listener {
 
 	@EventHandler
 	public void onEntityExplode(EntityExplodeEvent event) {
-		if (event.getEntityType() == EntityType.CREEPER) {
-			List<Block> blocks = event.blockList();
-			for (Block block : blocks) {
-				main.getDataFile().set(main.locationToString(event.getLocation()) + ".blocks." + main.locationToString(block.getLocation()) + ".id",
-						block.getType().toString());
-				main.getDataFile().set(main.locationToString(event.getLocation()) + ".blocks." + main.locationToString(block.getLocation()) + ".data", block.getData());
+		List<Block> blocks = event.blockList();
+
+		final ArrayList<ArrayList<Object>> al = new ArrayList<ArrayList<Object>>();
+		for (Block block : blocks) {
+			if (!block.getType().toString().equals("TNT")) {
+				ArrayList<Object> al2 = new ArrayList<Object>();
+				al2.add(block.getType().toString());
+				al2.add(Byte.toString(block.getData()));
+				al2.add(block.getLocation());
+				al.add(al2);
 			}
-			main.getDataFile().set(main.locationToString(event.getLocation()) + ".rebuild", 10);
 		}
+		BukkitScheduler scheduler = Bukkit.getScheduler();
+		scheduler.scheduleSyncDelayedTask(main, new Runnable() {
+			@Override
+			public void run() {
+				main.repair(al);
+			}
+		}, (main.getConfigFile().getInt("regen_delay")) * 20);
 	}
 }

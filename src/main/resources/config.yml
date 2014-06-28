@@ -1,0 +1,2 @@
+#time (in seconds) between explsion & regeneration
+regen_delay: 60
