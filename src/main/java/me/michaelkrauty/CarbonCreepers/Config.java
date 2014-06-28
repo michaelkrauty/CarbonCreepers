@@ -60,27 +60,7 @@ public class Config {
 		}
 	}
 
-	public void set(String path, String str) {
-		config.set(path, str);
-		save();
-		reload();
-	}
-
-	public String getString(String path) {
-		return config.getString(path);
-	}
-
 	public int getInt(String path) {
 		return config.getInt(path);
-	}
-
-	public Set<String> getKeys(String path) {
-		return config.getConfigurationSection(path).getKeys(true);
-	}
-
-	public void delete(String path) {
-		config.set(path, null);
-		save();
-		reload();
 	}
 }
