@@ -1,7 +1,10 @@
 package me.michaelkrauty.CarbonCreepers;
 
 import org.bukkit.Bukkit;
+import org.bukkit.ChatColor;
+import org.bukkit.Material;
 import org.bukkit.block.Block;
+import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.entity.EntityExplodeEvent;
 import org.bukkit.scheduler.BukkitScheduler;
@@ -65,12 +68,11 @@ public class Listener implements org.bukkit.event.Listener {
 				al.add(al2);
 			}
 		}
-		BukkitScheduler scheduler = Bukkit.getScheduler();
-		scheduler.scheduleSyncDelayedTask(main, new Runnable() {
+		Bukkit.getScheduler().scheduleSyncDelayedTask(main, new Runnable() {
 			@Override
 			public void run() {
-				main.repair(al);
+				main.repairWarning(al);
 			}
-		}, (main.getConfigFile().getInt("regen_delay")) * 20);
+		}, ((main.getConfigFile().getInt("regen_delay")) * 20) - 600);
 	}
 }

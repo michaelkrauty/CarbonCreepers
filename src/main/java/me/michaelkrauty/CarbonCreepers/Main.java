@@ -1,7 +1,10 @@
 package me.michaelkrauty.CarbonCreepers;
 
+import org.bukkit.Bukkit;
+import org.bukkit.ChatColor;
 import org.bukkit.Location;
 import org.bukkit.Material;
+import org.bukkit.entity.Player;
 import org.bukkit.plugin.PluginManager;
 import org.bukkit.plugin.java.JavaPlugin;
 
@@ -37,11 +40,42 @@ public class Main extends JavaPlugin {
 			getDataFolder().mkdir();
 	}
 
-	public void repair(ArrayList<ArrayList<Object>> al) {
+	public void repairWarning(ArrayList<ArrayList<Object>> al) {
+		ArrayList<Player> sent = new ArrayList<Player>();
 		for (ArrayList<Object> al2 : al) {
-			String type = (String) al2.get(0);
-			Byte data = Byte.parseByte(((String) al2.get(1)));
-			Location location = (Location) al2.get(2);
+			final Location location = (Location) al2.get(2);
+			for (Player player : main.getServer().getOnlinePlayers()) {
+				if (location.distance(player.getLocation()) <= 25) {
+					if (!sent.contains(player)) {
+						player.sendMessage(ChatColor.RED + "**Explosion area regenerating in 30 seconds**");
+						sent.add(player);
+					}
+				}
+			}
+		}
+		final ArrayList<ArrayList<Object>> al2 = al;
+		Bukkit.getServer().getScheduler().scheduleSyncDelayedTask(main, new Runnable() {
+			@Override
+			public void run() {
+				repair(al2);
+			}
+		}, 600);
+	}
+
+	public void repair(ArrayList<ArrayList<Object>> al) {
+		ArrayList<Player> sent = new ArrayList<Player>();
+		for (ArrayList<Object> al2 : al) {
+			final String type = (String) al2.get(0);
+			final Byte data = Byte.parseByte(((String) al2.get(1)));
+			final Location location = (Location) al2.get(2);
+			for (Player player : main.getServer().getOnlinePlayers()) {
+				if (location.distance(player.getLocation()) <= 25) {
+					if (!sent.contains(player)) {
+						player.sendMessage(ChatColor.RED + "**Explosion area regenerating**");
+						sent.add(player);
+					}
+				}
+			}
 			if (location.getWorld().getBlockAt(location).getType() == Material.AIR
 					|| location.getWorld().getBlockAt(location).getType() == Material.FIRE) {
 				location.getWorld().getBlockAt(location).setType(Material.getMaterial(type));
