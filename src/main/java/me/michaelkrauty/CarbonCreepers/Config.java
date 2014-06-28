@@ -51,14 +51,6 @@ public class Config {
 		}
 	}
 
-	public void save() {
-		try {
-			config.save(configFile);
-		} catch (Exception e) {
-			e.printStackTrace();
-		}
-	}
-
 	public int getInt(String path) {
 		return config.getInt(path);
 	}
