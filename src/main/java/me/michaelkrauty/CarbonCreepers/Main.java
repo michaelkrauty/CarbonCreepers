@@ -42,13 +42,17 @@ public class Main extends JavaPlugin {
 
 	public void repairWarning(ArrayList<ArrayList<Object>> al) {
 		ArrayList<Player> sent = new ArrayList<Player>();
-		for (ArrayList<Object> al2 : al) {
-			final Location location = (Location) al2.get(2);
-			for (Player player : main.getServer().getOnlinePlayers()) {
-				if (location.distance(player.getLocation()) <= 25) {
-					if (!sent.contains(player)) {
-						player.sendMessage(ChatColor.RED + "**Explosion area regenerating in 30 seconds**");
-						sent.add(player);
+		int delay = (getConfigFile().getInt("regen_delay") * 20);
+		int warning = getConfigFile().getInt("warning_time");
+		if (getConfigFile().getBoolean("warning")) {
+			for (ArrayList<Object> al2 : al) {
+				final Location location = (Location) al2.get(2);
+				for (Player player : main.getServer().getOnlinePlayers()) {
+					if (location.distance(player.getLocation()) <= 25) {
+						if (!sent.contains(player)) {
+							player.sendMessage(ChatColor.RED + "**Explosion area regenerating in " + warning + " seconds**");
+							sent.add(player);
+						}
 					}
 				}
 			}
@@ -59,7 +63,7 @@ public class Main extends JavaPlugin {
 			public void run() {
 				repair(al2);
 			}
-		}, 600);
+		}, warning * 20);
 	}
 
 	public void repair(ArrayList<ArrayList<Object>> al) {

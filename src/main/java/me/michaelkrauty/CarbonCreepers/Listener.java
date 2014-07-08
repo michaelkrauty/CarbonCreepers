@@ -73,6 +73,6 @@ public class Listener implements org.bukkit.event.Listener {
 			public void run() {
 				main.repairWarning(al);
 			}
-		}, ((main.getConfigFile().getInt("regen_delay")) * 20) - 600);
+		}, ((main.getConfigFile().getInt("regen_delay")) * 20) - main.getConfigFile().getInt("warning_time"));
 	}
 }

@@ -1,2 +1,6 @@
 #time (in seconds) between explsion & regeneration
 regen_delay: 600
+#enable warning?
+warning: true
+#how long before regen should we warn the players?
+warning_time: 15
