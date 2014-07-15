@@ -55,5 +55,7 @@ public class Config {
 		return config.getInt(path);
 	}
 
-	public boolean getBoolean(String path) { return config.getBoolean(path); }
+	public boolean getBoolean(String path) {
+		return config.getBoolean(path);
+	}
 }

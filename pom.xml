@@ -24,7 +24,6 @@
     </dependencies>
 
     <build>
-        <directory>G:\Users\Michael\IdeaProjects\Locker\target\LockerTest\plugins</directory>
         <finalName>CarbonCreepers</finalName>
     </build>
 
