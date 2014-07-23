@@ -32,7 +32,7 @@ public class Main extends JavaPlugin {
 	}
 
 	public void onDisable() {
-
+		// TODO: save blocks which still need to be regenerated
 	}
 
 	public void checkDataFolder() {
