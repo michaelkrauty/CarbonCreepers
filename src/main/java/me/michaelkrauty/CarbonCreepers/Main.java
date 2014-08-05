@@ -20,19 +20,23 @@ public class Main extends JavaPlugin {
 	public static Main main;
 
 	public static Config config;
-	public static DataFile dataFile;
+
+	public static ArrayList<ArrayList<ArrayList<Object>>> regenThis = new ArrayList<ArrayList<ArrayList<Object>>>();
 
 	public void onEnable() {
 		main = this;
 		checkDataFolder();
-		dataFile = new DataFile();
 		config = new Config(this);
 		PluginManager pm = getServer().getPluginManager();
 		pm.registerEvents(new me.michaelkrauty.CarbonCreepers.Listener(this), this);
+
+
 	}
 
 	public void onDisable() {
-		// TODO: save blocks which still need to be regenerated
+		for (ArrayList<ArrayList<Object>> asdf : regenThis) {
+			repair(asdf);
+		}
 	}
 
 	public void checkDataFolder() {
@@ -89,6 +93,8 @@ public class Main extends JavaPlugin {
 				location.getWorld().getBlockAt(location).setData(data);
 			}
 		}
+		if (regenThis.contains(al))
+			regenThis.remove(al);
 	}
 
 	public Config getConfigFile() {
