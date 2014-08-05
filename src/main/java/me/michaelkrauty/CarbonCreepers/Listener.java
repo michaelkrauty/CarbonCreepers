@@ -35,9 +35,6 @@ public class Listener implements org.bukkit.event.Listener {
 			}
 		}
 
-		// for development
-		System.out.println(al);
-
 		main.regenThis.add(al);
 
 		Bukkit.getScheduler().scheduleSyncDelayedTask(main, new Runnable() {

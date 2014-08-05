@@ -1,11 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="e9b936a5-1190-4149-b83c-d75d3f60db8d" name="Default" comment="fix error with scheduler exceptions">
-      <change type="DELETED" beforePath="G:\Users\Michael\IdeaProjects\CarbonCreepers\src\main\java\me\michaelkrauty\CarbonCreepers\DataFile.java" afterPath="" />
+    <list default="true" id="e9b936a5-1190-4149-b83c-d75d3f60db8d" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/me/michaelkrauty/CarbonCreepers/Listener.java" afterPath="$PROJECT_DIR$/src/main/java/me/michaelkrauty/CarbonCreepers/Listener.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/me/michaelkrauty/CarbonCreepers/Main.java" afterPath="$PROJECT_DIR$/src/main/java/me/michaelkrauty/CarbonCreepers/Main.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/plugin.yml" afterPath="$PROJECT_DIR$/src/main/resources/plugin.yml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="CarbonCreepers.iws" />
@@ -39,11 +36,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Main.java" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="Main.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/me/michaelkrauty/CarbonCreepers/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.36468646" vertical-offset="0" max-vertical-offset="1683">
-              <caret line="21" column="32" selection-start-line="21" selection-start-column="32" selection-end-line="21" selection-end-column="32" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1683">
+              <caret line="30" column="84" selection-start-line="30" selection-start-column="84" selection-end-line="30" selection-end-column="84" />
               <folding>
                 <element signature="e#537#567#0" expanded="true" />
                 <element signature="e#1109#1117#0" expanded="true" />
@@ -85,16 +82,16 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Listener.java" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="Listener.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/me/michaelkrauty/CarbonCreepers/Listener.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="306" max-vertical-offset="1394">
-              <caret line="51" column="56" selection-start-line="51" selection-start-column="56" selection-end-line="51" selection-end-column="56" />
+            <state vertical-scroll-proportion="0.28099173" vertical-offset="306" max-vertical-offset="1343">
+              <caret line="35" column="9" selection-start-line="35" selection-start-column="9" selection-end-line="35" selection-end-column="9" />
               <folding>
                 <element signature="e#547#566#0" expanded="true" />
                 <element signature="e#683#691#0" expanded="true" />
-                <element signature="e#971#1060#0" expanded="true" />
-                <element signature="e#1055#1056#0" expanded="true" />
+                <element signature="e#923#1012#0" expanded="true" />
+                <element signature="e#1007#1008#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -125,9 +122,9 @@
         <option value="$PROJECT_DIR$/src/main/resources/config.yml" />
         <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/src/main/java/me/michaelkrauty/CarbonCreepers/DataFile.java" />
-        <option value="$PROJECT_DIR$/src/main/java/me/michaelkrauty/CarbonCreepers/Listener.java" />
         <option value="$PROJECT_DIR$/src/main/resources/plugin.yml" />
         <option value="$PROJECT_DIR$/src/main/java/me/michaelkrauty/CarbonCreepers/Main.java" />
+        <option value="$PROJECT_DIR$/src/main/java/me/michaelkrauty/CarbonCreepers/Listener.java" />
       </list>
     </option>
   </component>
@@ -554,7 +551,11 @@
       <created>1405455947059</created>
       <updated>1405455947059</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="update + regen blocks on disable">
+      <created>1407275390556</created>
+      <updated>1407275390556</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -578,7 +579,7 @@
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.1705757" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32264957" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32299465" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32941177" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -613,7 +614,8 @@
     <MESSAGE value="added warnings for players within area regeneration range" />
     <MESSAGE value="update" />
     <MESSAGE value="fix error with scheduler exceptions" />
-    <option name="LAST_COMMIT_MESSAGE" value="fix error with scheduler exceptions" />
+    <MESSAGE value="update + regen blocks on disable" />
+    <option name="LAST_COMMIT_MESSAGE" value="update + regen blocks on disable" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -646,8 +648,8 @@
           <folding>
             <element signature="e#547#566#0" expanded="true" />
             <element signature="e#683#691#0" expanded="true" />
-            <element signature="e#971#1060#0" expanded="true" />
-            <element signature="e#1055#1056#0" expanded="true" />
+            <element signature="e#923#1012#0" expanded="true" />
+            <element signature="e#1007#1008#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -697,8 +699,8 @@
           <folding>
             <element signature="e#547#566#0" expanded="true" />
             <element signature="e#683#691#0" expanded="true" />
-            <element signature="e#971#1060#0" expanded="true" />
-            <element signature="e#1055#1056#0" expanded="true" />
+            <element signature="e#923#1012#0" expanded="true" />
+            <element signature="e#1007#1008#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -748,8 +750,8 @@
           <folding>
             <element signature="e#547#566#0" expanded="true" />
             <element signature="e#683#691#0" expanded="true" />
-            <element signature="e#971#1060#0" expanded="true" />
-            <element signature="e#1055#1056#0" expanded="true" />
+            <element signature="e#923#1012#0" expanded="true" />
+            <element signature="e#1007#1008#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -799,8 +801,8 @@
           <folding>
             <element signature="e#547#566#0" expanded="true" />
             <element signature="e#683#691#0" expanded="true" />
-            <element signature="e#971#1060#0" expanded="true" />
-            <element signature="e#1055#1056#0" expanded="true" />
+            <element signature="e#923#1012#0" expanded="true" />
+            <element signature="e#1007#1008#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -850,8 +852,8 @@
           <folding>
             <element signature="e#547#566#0" expanded="true" />
             <element signature="e#683#691#0" expanded="true" />
-            <element signature="e#971#1060#0" expanded="true" />
-            <element signature="e#1055#1056#0" expanded="true" />
+            <element signature="e#923#1012#0" expanded="true" />
+            <element signature="e#1007#1008#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -885,8 +887,8 @@
           <folding>
             <element signature="e#547#566#0" expanded="true" />
             <element signature="e#683#691#0" expanded="true" />
-            <element signature="e#971#1060#0" expanded="true" />
-            <element signature="e#1055#1056#0" expanded="true" />
+            <element signature="e#923#1012#0" expanded="true" />
+            <element signature="e#1007#1008#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -920,8 +922,8 @@
           <folding>
             <element signature="e#547#566#0" expanded="true" />
             <element signature="e#683#691#0" expanded="true" />
-            <element signature="e#971#1060#0" expanded="true" />
-            <element signature="e#1055#1056#0" expanded="true" />
+            <element signature="e#923#1012#0" expanded="true" />
+            <element signature="e#1007#1008#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -955,8 +957,8 @@
           <folding>
             <element signature="e#547#566#0" expanded="true" />
             <element signature="e#683#691#0" expanded="true" />
-            <element signature="e#971#1060#0" expanded="true" />
-            <element signature="e#1055#1056#0" expanded="true" />
+            <element signature="e#923#1012#0" expanded="true" />
+            <element signature="e#1007#1008#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -990,8 +992,8 @@
           <folding>
             <element signature="e#547#566#0" expanded="true" />
             <element signature="e#683#691#0" expanded="true" />
-            <element signature="e#971#1060#0" expanded="true" />
-            <element signature="e#1055#1056#0" expanded="true" />
+            <element signature="e#923#1012#0" expanded="true" />
+            <element signature="e#1007#1008#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1028,29 +1030,29 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/me/michaelkrauty/CarbonCreepers/Listener.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="306" max-vertical-offset="1394">
-          <caret line="51" column="56" selection-start-line="51" selection-start-column="56" selection-end-line="51" selection-end-column="56" />
-          <folding>
-            <element signature="e#547#566#0" expanded="true" />
-            <element signature="e#683#691#0" expanded="true" />
-            <element signature="e#971#1060#0" expanded="true" />
-            <element signature="e#1055#1056#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/me/michaelkrauty/CarbonCreepers/Main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.36468646" vertical-offset="0" max-vertical-offset="1683">
-          <caret line="21" column="32" selection-start-line="21" selection-start-column="32" selection-end-line="21" selection-end-column="32" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1683">
+          <caret line="30" column="84" selection-start-line="30" selection-start-column="84" selection-end-line="30" selection-end-column="84" />
           <folding>
             <element signature="e#537#567#0" expanded="true" />
             <element signature="e#1109#1117#0" expanded="true" />
             <element signature="e#1812#1890#0" expanded="true" />
             <element signature="e#1885#1886#0" expanded="true" />
             <element signature="e#2006#2014#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/me/michaelkrauty/CarbonCreepers/Listener.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.28099173" vertical-offset="306" max-vertical-offset="1343">
+          <caret line="35" column="9" selection-start-line="35" selection-start-column="9" selection-end-line="35" selection-end-column="9" />
+          <folding>
+            <element signature="e#547#566#0" expanded="true" />
+            <element signature="e#683#691#0" expanded="true" />
+            <element signature="e#923#1012#0" expanded="true" />
+            <element signature="e#1007#1008#0" expanded="true" />
           </folding>
         </state>
       </provider>
